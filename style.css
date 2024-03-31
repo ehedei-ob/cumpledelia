@@ -29,8 +29,7 @@ html, body {
   background-image: url(https://raw.githubusercontent.com/ehedei-ob/cumpledelia/main/image/space-opera-1.webp);
   flex: 1 1 0px;
   animation: bg-1 25s linear 0s infinite alternate none;
-  margin-bottom: 12px;
-
+  padding-bottom: 12px;
 }
 
 .responsive-img-2 {
@@ -41,7 +40,7 @@ html, body {
   background-image: url(https://raw.githubusercontent.com/ehedei-ob/cumpledelia/main/image/space-opera-2.webp);
   flex: 1 1 0px;
   animation: bg-2 25s linear 0s infinite alternate none;
-  margin-top: 12px;
+  padding-top: 12px;
 }
 
 
