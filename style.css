@@ -1,0 +1,149 @@
+html, body { 
+  background: hsl(220, 80%, 8%);
+  height: 100%;
+  width: 100%;
+}
+
+.section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (orientation: landscape) {
+  .responsive-img-1,
+  .responsive-img-2,
+  .container {
+    min-height: 100vh;
+  }
+
+}
+
+.responsive-img-1 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-image: url(/image/space-opera-1.webp);
+  flex: 1 1 0px;
+  animation: bg-1 15s linear 0s infinite alternate none;
+}
+
+.responsive-img-2 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-image: url(/image/space-opera-3.webp);
+  flex: 1 1 0px;
+  animation: bg-2 15s linear 0s infinite alternate none;
+}
+
+
+.container {
+  flex: 1 1 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin-top: 25px;
+  position: relative;
+  text-align: center;
+  transform: translateZ(0);
+  transform-style: preserve-3d;
+}
+
+.title .text {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: calc(20vw / var(--word-total) );
+  line-height: 1.0;
+}
+
+.title .write .word {
+  color: hsl(0, 0%, 80%);
+  text-shadow: 0 0 0.1em currentColor;
+  transform-style: preserve-3d;
+  -webkit-animation: write linear both;
+          animation: write linear both;
+}
+
+.title .laser {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* To avoid the blur getting masked by the clip-path we had to duplicate the element */
+  filter: blur(4px) contrast(10);
+  pointer-events: none;
+}
+
+.title .laser .word {
+  display: inline-block;
+}
+
+.title .laser .word {
+  color: hsl(0, 100%, 75%);
+  text-shadow: 0 0 0.1em currentColor;
+  transform: translateZ(5px);
+  -webkit-animation: laser linear both;
+          animation: laser linear both;
+}
+
+.title .write .word,
+.title .laser .word {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: calc(0.3s + var(--word-index) * 160ms);
+          animation-delay: calc(0.3s + var(--word-index) * 160ms);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.title:hover .word {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+/* .title .text .word,
+.title .text .word::before {
+  animation-play-state: paused;
+  animation-delay: -0.4s;
+} */
+
+@-webkit-keyframes write {
+  from, 30% { -webkit-clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%); clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%) }
+  70%, to { -webkit-clip-path: polygon(-15% 0%, 120% 0%, 120% 100%, -15% 100%); clip-path: polygon(-15% 0%, 120% 0%, 120% 100%, -15% 100%) }
+}
+
+@keyframes write {
+  from, 30% { -webkit-clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%); clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%) }
+  70%, to { -webkit-clip-path: polygon(-15% 0%, 120% 0%, 120% 100%, -15% 100%); clip-path: polygon(-15% 0%, 120% 0%, 120% 100%, -15% 100%) }
+}
+
+@-webkit-keyframes laser {
+  from, 30% { -webkit-clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%); clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%) }
+  70%, to { -webkit-clip-path: polygon(115% 0%, 120% 0%, 120% 100%, 115% 100%); clip-path: polygon(115% 0%, 120% 0%, 120% 100%, 115% 100%) }
+}
+
+@keyframes laser {
+  from, 30% { -webkit-clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%); clip-path: polygon(-20% 0%, -15% 0%, -15% 100%, -20% 100%) }
+  70%, to { -webkit-clip-path: polygon(115% 0%, 120% 0%, 120% 100%, 115% 100%); clip-path: polygon(115% 0%, 120% 0%, 120% 100%, 115% 100%) }
+}
+
+@keyframes bg-1 {
+  from, 20% {background-image: url(/image/space-opera-1.webp);}
+  25%, 75% {background-image: url(/image/space-opera-2.webp);}
+  80%, to {background-image: url(/image/space-opera-3.webp);}
+}
+
+@keyframes bg-2 {
+  from, 20% {background-image: url(/image/space-opera-2.webp);}
+  25%, 75% {background-image: url(/image/space-opera-3.webp);}
+  80%, to {background-image: url(/image/space-opera-1.webp);}
+}
