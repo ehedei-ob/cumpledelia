@@ -43,8 +43,8 @@ html, body {
 
 
 .container {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   flex: 1 1 0px;
   width: 100%;
   display: flex;
@@ -54,8 +54,8 @@ html, body {
 }
 
 .title {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   position: relative;
   text-align: center;
   transform: translateZ(0);
