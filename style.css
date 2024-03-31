@@ -26,7 +26,7 @@ html, body {
   background-position: center;
   background-repeat: no-repeat;
   background-color: black;
-  background-image: url(/image/space-opera-1.webp);
+  background-image: url(https://raw.githubusercontent.com/ehedei-ob/cumpledelia/main/image/space-opera-1.webp);
   flex: 1 1 0px;
   animation: bg-1 15s linear 0s infinite alternate none;
 }
@@ -36,13 +36,15 @@ html, body {
   background-position: center;
   background-repeat: no-repeat;
   background-color: black;
-  background-image: url(/image/space-opera-3.webp);
+  background-image: url(https://raw.githubusercontent.com/ehedei-ob/cumpledelia/main/image/space-opera-2.webp);
   flex: 1 1 0px;
   animation: bg-2 15s linear 0s infinite alternate none;
 }
 
 
 .container {
+  margin-top: 12px;
+  margin-bottom: 12px;
   flex: 1 1 0px;
   width: 100%;
   display: flex;
@@ -52,7 +54,8 @@ html, body {
 }
 
 .title {
-  margin-top: 25px;
+  margin-top: 12px;
+  margin-bottom: 12px;
   position: relative;
   text-align: center;
   transform: translateZ(0);
@@ -137,13 +140,13 @@ html, body {
 }
 
 @keyframes bg-1 {
-  from, 20% {background-image: url(/image/space-opera-1.webp);}
-  25%, 75% {background-image: url(/image/space-opera-2.webp);}
-  80%, to {background-image: url(/image/space-opera-3.webp);}
+  from, 20% {background-image: url(https://raw.githubusercontent.com/ehedei-ob/cumpledelia/main/image/space-opera-1.webp);}
+  25%, 75% {background-image: url(https://raw.githubusercontent.com/ehedei-ob/cumpledelia/main/image/space-opera-2.webp);}
+  80%, to {background-image: url(https://raw.githubusercontent.com/ehedei-ob/cumpledelia/main/image/space-opera-3.webp);}
 }
 
 @keyframes bg-2 {
-  from, 20% {background-image: url(/image/space-opera-2.webp);}
-  25%, 75% {background-image: url(/image/space-opera-3.webp);}
-  80%, to {background-image: url(/image/space-opera-1.webp);}
+  from, 20% {background-image: url(https://raw.githubusercontent.com/ehedei-ob/cumpledelia/main/image/space-opera-2.webp);}
+  25%, 75% {background-image: url(https://raw.githubusercontent.com/ehedei-ob/cumpledelia/main/image/space-opera-3.webp);}
+  80%, to {background-image: url(https://raw.githubusercontent.com/ehedei-ob/cumpledelia/main/image/space-opera-1.webp);}
 }
